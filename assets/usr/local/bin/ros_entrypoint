@@ -5,6 +5,7 @@
 
 # Start rosbridge in background
 roslaunch rosbridge_server rosbridge_websocket.launch > ~/rosbridge_server.log 2>&1 &
+sleep 1 # give roscore time to start
 roslaunch pyride_msg_bridge pyride_bridge.launch > ~/pyride_msg_server.log 2>&1 &
 ros_pid=$!
 

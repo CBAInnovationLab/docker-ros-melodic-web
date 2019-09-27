@@ -6,8 +6,17 @@
 
 ### How to use the image
 
-- run `docker run --rm -it -p 11311:11311 -p 9090:9090 docker-ros-melodic-web`
+- run `docker run --rm -it -p 11311:11311 -p 9090:9090 docker-ros-melodic-web` to start the built-in processes and a terminal.
 
-- run ros apps in the main shell
+- start ```Python``` in the terminal, do
+```python
+>>> import PyConnect
+>>> PyConnect.discover()
+>>> m=PyConnect.PyRIDEMsgBridge
+>>> m.sendMessageToNode( 'joyride_foreground', '{"type": "img", "value": "art/Work-in-Progress.png"}' ) # for example
 
-- attach a new shell with `docker exec -it bash -l`
+```
+
+- you can also attach a new shell with `docker exec -it <container name> bash`
+
+**NOTE**: The ```chip-monitor``` should set ```ROSBRIDGE_URI``` to ```ws://localhost:9090``` in its ```webpack.config.js```.
