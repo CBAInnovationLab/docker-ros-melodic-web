@@ -21,7 +21,5 @@ elif [ -t 0 ]; then
 
 # otherwise: wait on child processes
 else
-    chmod 777 *.log
-    tail -qF *.log &
     wait $ros_pid
 fi
