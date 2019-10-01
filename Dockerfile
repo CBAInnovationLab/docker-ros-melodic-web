@@ -16,6 +16,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
 RUN useradd --create-home --shell=/bin/bash pepper  
 
 #RUN rosdep init
+USER pepper
 WORKDIR /home/pepper
 RUN . "/opt/ros/${ROS_DISTRO}/setup.sh" && \
   rosdep update
