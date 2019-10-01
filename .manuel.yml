@@ -1,0 +1,6 @@
+org: CBAInnovationLab
+repo: k8s-environment
+author: Manuel
+email: no-reply@commbanklabs.com.au
+file: environments/images.yaml
+path: "images.ros"
