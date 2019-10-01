@@ -14,7 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
   && rm -rf /var/lib/apt/lists/*
 
 #RUN rosdep init
-WORKDIR /home/root
+WORKDIR /home/pepper
 RUN . "/opt/ros/${ROS_DISTRO}/setup.sh" && \
   rosdep update
 
