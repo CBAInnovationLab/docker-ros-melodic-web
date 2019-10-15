@@ -54,4 +54,4 @@ EXPOSE 11311
 EXPOSE 9090
 EXPOSE 37251
 
-ENTRYPOINT ["/usr/local/bin/ros_entrypoint"]
+ENTRYPOINT ["/usr/local/bin/ros_entrypoint.sh"]

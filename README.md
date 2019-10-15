@@ -12,8 +12,8 @@
 ```python
 >>> import PyConnect
 >>> PyConnect.discover()
->>> m=PyConnect.PyRIDEMsgBridge
->>> m.sendMessageToNode( 'joyride_foreground', '{"type": "img", "value": "art/Work-in-Progress.png"}' ) # for example
+>>> bridge = PyConnect.PyRIDEMsgBridge
+>>> bridge.sendMessageToNode('joyride_foreground', '{"type": "img", "value": "art/innovation-lab-logo.png"}') # for example
 
 ```
 
